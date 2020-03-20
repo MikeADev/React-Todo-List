@@ -27,10 +27,24 @@ class App extends React.Component {
     })});
   }
 
+  delToDo = (id) => {
+    this.setState({todos: this.state.todos.filter(todo => todo.id !== id).map(todo => {
+      if (todo.id > id){
+        todo.id -= 1
+      }
+      return todo;
+    })});
+  }
+
   render() {
     return (
-      <div className="App">
-        <Todos todos={this.state.todos} markComplete={this.markComplete}/>
+      <div className="App card" style={{width: "18rem"}}>
+        <div className="card-header">
+          To-Do
+        </div>
+        <ul className="list-group list-group-flush">
+          <Todos todos={this.state.todos} markComplete={this.markComplete} delToDo={this.delToDo}/>
+        </ul>
       </div>
     );
   }

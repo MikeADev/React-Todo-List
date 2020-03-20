@@ -12,13 +12,11 @@ export class TodoItem extends React.Component {
     render() {
         const { id, title } = this.props.todo;
         return (
-            <div style={this.getStyle()}>
-                <p>
-                    <input type="checkbox" onChange={this.props.markComplete.bind(this, id)}></input>
-                    {title}
-                    <button type="button" class="btn btn-danger">x</button>
-                </p>
-            </div>
+            <li style={this.getStyle()} className="list-group-item">
+                <input type="checkbox" onChange={this.props.markComplete.bind(this, id)}></input>
+                <p>{title}</p>
+                <button type="button" className="btn btn-danger" onClick={this.props.delToDo.bind(this, id)}>x</button>
+            </li>
         )
     }
 }
