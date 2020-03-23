@@ -11,3 +11,40 @@ body {
 a {
   text-decoration: none;
 }
+
+.App {
+  margin: 0 auto;
+}
+
+.list-group-item {
+  text-align: left;
+}
+
+.list-group-item p {
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+.list-group-item button {
+  position: absolute;
+  left: 254px;
+  top: 10.5px;
+}
+
+.delToDo-enter {
+  opacity: 0.01;
+}
+
+.delToDo-enter.delToDo-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.delToDo-leave {
+  opacity: 1;
+}
+
+.delToDo-leave.delToDo-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
