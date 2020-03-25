@@ -12,12 +12,23 @@ a {
   text-decoration: none;
 }
 
+input[type=text] {
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .App {
-  margin: 0 auto;
+  margin: 100px auto;
 }
 
 .list-group-item {
   text-align: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .list-group-item p {
@@ -27,7 +38,7 @@ a {
 
 .list-group-item button {
   position: absolute;
-  left: 254px;
+  left: 90%;
   top: 10.5px;
 }
 
@@ -37,7 +48,7 @@ a {
 
 .delToDo-enter.delToDo-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-in;
+  transition: opacity 700ms ease-in;
 }
 
 .delToDo-leave {
@@ -46,5 +57,5 @@ a {
 
 .delToDo-leave.delToDo-leave-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in;
+  transition: opacity 700ms ease-in;
 }
