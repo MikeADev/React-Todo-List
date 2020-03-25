@@ -24,6 +24,8 @@ class App extends React.Component {
     ]
   }
 
+  // Toggles completed on a todo to add line-through styling via
+  // getStyle in TodoItem.js
   markComplete = (id) => {
     this.setState({todos: this.state.todos.map(todo => {
       if (todo.id === id){
@@ -33,10 +35,14 @@ class App extends React.Component {
     })})
   }
 
+  // Filters a todo with matching id from state. 
+  // Triggered by TodoItem button
   delToDo = (id) => {
     this.setState({todos: this.state.todos.filter(todo => todo.id !== id)});
   }
-
+  
+  // Creates a new todo
+  // Triggered by AddTodo button
   addTodo = (id, title) => {
     this.setState({todos: [...this.state.todos, {id: id, title: title, completed: false}]});
   }

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export class TodoItem extends React.Component {
+    // Sets a style of line-through if todo prop is completed
+    // or none if not completed
     getStyle = () => {
         return {
             textDecoration: this.props.todo.completed ?
@@ -21,6 +23,7 @@ export class TodoItem extends React.Component {
     }
 }
 
+// PropTypes
 TodoItem.propTypes = {
     todo: PropTypes.array.isRequired,
     markComplete: PropTypes.func.isRequired,

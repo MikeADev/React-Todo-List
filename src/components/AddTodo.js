@@ -8,6 +8,8 @@ export class AddTodo extends React.Component {
         title: ''
     }
 
+    // If the input element is not blank, calls addTodo (App.js) function
+    // in props and passes state id and title as arguments
     onSubmit = (e) => {
         e.preventDefault();
         if (this.state.title !== ''){
@@ -16,6 +18,7 @@ export class AddTodo extends React.Component {
         }
     }
 
+    // Updates state title to match the value of input element
     onChange = (e) => this.setState({title : e.target.value});
 
     render() {
@@ -26,7 +29,7 @@ export class AddTodo extends React.Component {
                 name="title" 
                 style={{flex: '10'}} 
                 placeholder="Add Todo..." 
-                value={this.state.title}
+                value={this.state.title} 
                 onChange={this.onChange} 
               />
               <input 
@@ -40,6 +43,7 @@ export class AddTodo extends React.Component {
     }
 }
 
+// PropTypes
 AddTodo.propTypes = {
     todos: PropTypes.array.isRequired,
     addTodo: PropTypes.func.isRequired
